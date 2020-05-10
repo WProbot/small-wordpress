@@ -1,5 +1,9 @@
 #!/bin/bash
 
+#
+# all-pull.sh
+#
+
   cd
 
   find . | gawk '
