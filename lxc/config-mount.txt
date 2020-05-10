@@ -1,0 +1,5 @@
+
+  lxc.mount.entry = /var/cache/apt/archives   var/cache/apt/archives   none bind 0 0
+  lxc.mount.entry = /BACKUP/lxc               BACKUP/lxc               none bind 0 0
+  lxc.mount.entry = /IN                       IN                       none bind 0 0
+

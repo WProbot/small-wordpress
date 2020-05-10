@@ -1,0 +1,10 @@
+
+# /dev/tun
+
+  lxc.cgroup.devices.allow = c 10:200 rwm
+
+# in container:
+#  mkdir -p  /dev/net
+#  mknod     /dev/net/tun c 10 200
+#  chmod 666 /dev/net/tun
+
