@@ -1,0 +1,7 @@
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{THE_REQUEST} ^.*(wp-login.php\?action=register).* [NC]
+  RewriteRule ^(.*)$ - [F,L]
+</IfModule>
+
