@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+ RewriteEngine On
+ RewriteCond %{DOCUMENT_ROOT}/wp-content/smush-webp/disable_smush_webp !-f
+ RewriteCond %{HTTP_ACCEPT} image/webp
+ RewriteCond %{REQUEST_FILENAME} -f
+ RewriteCond %{DOCUMENT_ROOT}/wp-content/smush-webp/$1.$2.webp -f
+ RewriteRule ^/?(.+)\.(jpe?g|png)$ /wp-content/smush-webp/$1.$2.webp [NC,T=image/webp,E=WEBP_image]
+</IfModule>
+
+<IfModule mod_headers.c>
+ Header append Vary Accept env=WEBP_image
+</IfModule>
+
+<IfModule mod_mime.c>
+ AddType image/webp .webp
+</IfModule>
